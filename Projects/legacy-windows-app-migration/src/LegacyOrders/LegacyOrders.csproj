@@ -1,0 +1,28 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>LegacyOrders</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\..\bin\</OutputPath>
+    <AppConfig>LegacyOrders.exe.config</AppConfig>
+    <DefineConstants>TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Compile Include="*.cs" />
+    <None Include="LegacyOrders.exe.config" />
+    <ProjectReference Include="..\Pricing\LegacyOrders.Pricing.csproj">
+      <Name>LegacyOrders.Pricing</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

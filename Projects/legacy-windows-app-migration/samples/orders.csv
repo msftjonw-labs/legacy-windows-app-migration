@@ -1,0 +1,4 @@
+OrderReference,Customer,Description,Quantity,UnitPrice,DiscountPercent,TaxPercent
+PO-1001,Contoso Manufacturing,Industrial pump,2,1250.00,10,8.25
+PO-1001,Contoso Manufacturing,"Installation kit, standard",2,75.00,0,8.25
+PO-1002,Fabrikam Services,Annual maintenance contract,1,2400.00,5,8.25
